@@ -1,0 +1,869 @@
+
+
+---------------------------- General Train Data Analysis ------------------------------------------------------
+
+
+Training data basic statistics:
+
+
+dimensions:
+(307511, 122)
+
+
+columns:
+['SK_ID_CURR' 'TARGET' 'NAME_CONTRACT_TYPE' 'CODE_GENDER' 'FLAG_OWN_CAR'
+ 'FLAG_OWN_REALTY' 'CNT_CHILDREN' 'AMT_INCOME_TOTAL' 'AMT_CREDIT'
+ 'AMT_ANNUITY' 'AMT_GOODS_PRICE' 'NAME_TYPE_SUITE' 'NAME_INCOME_TYPE'
+ 'NAME_EDUCATION_TYPE' 'NAME_FAMILY_STATUS' 'NAME_HOUSING_TYPE'
+ 'REGION_POPULATION_RELATIVE' 'DAYS_BIRTH' 'DAYS_EMPLOYED'
+ 'DAYS_REGISTRATION' 'DAYS_ID_PUBLISH' 'OWN_CAR_AGE' 'FLAG_MOBIL'
+ 'FLAG_EMP_PHONE' 'FLAG_WORK_PHONE' 'FLAG_CONT_MOBILE' 'FLAG_PHONE'
+ 'FLAG_EMAIL' 'OCCUPATION_TYPE' 'CNT_FAM_MEMBERS' 'REGION_RATING_CLIENT'
+ 'REGION_RATING_CLIENT_W_CITY' 'WEEKDAY_APPR_PROCESS_START'
+ 'HOUR_APPR_PROCESS_START' 'REG_REGION_NOT_LIVE_REGION'
+ 'REG_REGION_NOT_WORK_REGION' 'LIVE_REGION_NOT_WORK_REGION'
+ 'REG_CITY_NOT_LIVE_CITY' 'REG_CITY_NOT_WORK_CITY'
+ 'LIVE_CITY_NOT_WORK_CITY' 'ORGANIZATION_TYPE' 'EXT_SOURCE_1'
+ 'EXT_SOURCE_2' 'EXT_SOURCE_3' 'APARTMENTS_AVG' 'BASEMENTAREA_AVG'
+ 'YEARS_BEGINEXPLUATATION_AVG' 'YEARS_BUILD_AVG' 'COMMONAREA_AVG'
+ 'ELEVATORS_AVG' 'ENTRANCES_AVG' 'FLOORSMAX_AVG' 'FLOORSMIN_AVG'
+ 'LANDAREA_AVG' 'LIVINGAPARTMENTS_AVG' 'LIVINGAREA_AVG'
+ 'NONLIVINGAPARTMENTS_AVG' 'NONLIVINGAREA_AVG' 'APARTMENTS_MODE'
+ 'BASEMENTAREA_MODE' 'YEARS_BEGINEXPLUATATION_MODE' 'YEARS_BUILD_MODE'
+ 'COMMONAREA_MODE' 'ELEVATORS_MODE' 'ENTRANCES_MODE' 'FLOORSMAX_MODE'
+ 'FLOORSMIN_MODE' 'LANDAREA_MODE' 'LIVINGAPARTMENTS_MODE'
+ 'LIVINGAREA_MODE' 'NONLIVINGAPARTMENTS_MODE' 'NONLIVINGAREA_MODE'
+ 'APARTMENTS_MEDI' 'BASEMENTAREA_MEDI' 'YEARS_BEGINEXPLUATATION_MEDI'
+ 'YEARS_BUILD_MEDI' 'COMMONAREA_MEDI' 'ELEVATORS_MEDI' 'ENTRANCES_MEDI'
+ 'FLOORSMAX_MEDI' 'FLOORSMIN_MEDI' 'LANDAREA_MEDI' 'LIVINGAPARTMENTS_MEDI'
+ 'LIVINGAREA_MEDI' 'NONLIVINGAPARTMENTS_MEDI' 'NONLIVINGAREA_MEDI'
+ 'FONDKAPREMONT_MODE' 'HOUSETYPE_MODE' 'TOTALAREA_MODE'
+ 'WALLSMATERIAL_MODE' 'EMERGENCYSTATE_MODE' 'OBS_30_CNT_SOCIAL_CIRCLE'
+ 'DEF_30_CNT_SOCIAL_CIRCLE' 'OBS_60_CNT_SOCIAL_CIRCLE'
+ 'DEF_60_CNT_SOCIAL_CIRCLE' 'DAYS_LAST_PHONE_CHANGE' 'FLAG_DOCUMENT_2'
+ 'FLAG_DOCUMENT_3' 'FLAG_DOCUMENT_4' 'FLAG_DOCUMENT_5' 'FLAG_DOCUMENT_6'
+ 'FLAG_DOCUMENT_7' 'FLAG_DOCUMENT_8' 'FLAG_DOCUMENT_9' 'FLAG_DOCUMENT_10'
+ 'FLAG_DOCUMENT_11' 'FLAG_DOCUMENT_12' 'FLAG_DOCUMENT_13'
+ 'FLAG_DOCUMENT_14' 'FLAG_DOCUMENT_15' 'FLAG_DOCUMENT_16'
+ 'FLAG_DOCUMENT_17' 'FLAG_DOCUMENT_18' 'FLAG_DOCUMENT_19'
+ 'FLAG_DOCUMENT_20' 'FLAG_DOCUMENT_21' 'AMT_REQ_CREDIT_BUREAU_HOUR'
+ 'AMT_REQ_CREDIT_BUREAU_DAY' 'AMT_REQ_CREDIT_BUREAU_WEEK'
+ 'AMT_REQ_CREDIT_BUREAU_MON' 'AMT_REQ_CREDIT_BUREAU_QRT'
+ 'AMT_REQ_CREDIT_BUREAU_YEAR']
+
+
+data types count:
+float64    65
+int64      41
+object     16
+dtype: int64
+
+
+data types details:
+SK_ID_CURR                      int64
+TARGET                          int64
+NAME_CONTRACT_TYPE             object
+CODE_GENDER                    object
+FLAG_OWN_CAR                   object
+                               ...   
+AMT_REQ_CREDIT_BUREAU_DAY     float64
+AMT_REQ_CREDIT_BUREAU_WEEK    float64
+AMT_REQ_CREDIT_BUREAU_MON     float64
+AMT_REQ_CREDIT_BUREAU_QRT     float64
+AMT_REQ_CREDIT_BUREAU_YEAR    float64
+Length: 122, dtype: object
+
+
+Testing data basic statistics:
+
+
+dimensions:
+(48744, 121)
+
+
+columns:
+['SK_ID_CURR' 'NAME_CONTRACT_TYPE' 'CODE_GENDER' 'FLAG_OWN_CAR'
+ 'FLAG_OWN_REALTY' 'CNT_CHILDREN' 'AMT_INCOME_TOTAL' 'AMT_CREDIT'
+ 'AMT_ANNUITY' 'AMT_GOODS_PRICE' 'NAME_TYPE_SUITE' 'NAME_INCOME_TYPE'
+ 'NAME_EDUCATION_TYPE' 'NAME_FAMILY_STATUS' 'NAME_HOUSING_TYPE'
+ 'REGION_POPULATION_RELATIVE' 'DAYS_BIRTH' 'DAYS_EMPLOYED'
+ 'DAYS_REGISTRATION' 'DAYS_ID_PUBLISH' 'OWN_CAR_AGE' 'FLAG_MOBIL'
+ 'FLAG_EMP_PHONE' 'FLAG_WORK_PHONE' 'FLAG_CONT_MOBILE' 'FLAG_PHONE'
+ 'FLAG_EMAIL' 'OCCUPATION_TYPE' 'CNT_FAM_MEMBERS' 'REGION_RATING_CLIENT'
+ 'REGION_RATING_CLIENT_W_CITY' 'WEEKDAY_APPR_PROCESS_START'
+ 'HOUR_APPR_PROCESS_START' 'REG_REGION_NOT_LIVE_REGION'
+ 'REG_REGION_NOT_WORK_REGION' 'LIVE_REGION_NOT_WORK_REGION'
+ 'REG_CITY_NOT_LIVE_CITY' 'REG_CITY_NOT_WORK_CITY'
+ 'LIVE_CITY_NOT_WORK_CITY' 'ORGANIZATION_TYPE' 'EXT_SOURCE_1'
+ 'EXT_SOURCE_2' 'EXT_SOURCE_3' 'APARTMENTS_AVG' 'BASEMENTAREA_AVG'
+ 'YEARS_BEGINEXPLUATATION_AVG' 'YEARS_BUILD_AVG' 'COMMONAREA_AVG'
+ 'ELEVATORS_AVG' 'ENTRANCES_AVG' 'FLOORSMAX_AVG' 'FLOORSMIN_AVG'
+ 'LANDAREA_AVG' 'LIVINGAPARTMENTS_AVG' 'LIVINGAREA_AVG'
+ 'NONLIVINGAPARTMENTS_AVG' 'NONLIVINGAREA_AVG' 'APARTMENTS_MODE'
+ 'BASEMENTAREA_MODE' 'YEARS_BEGINEXPLUATATION_MODE' 'YEARS_BUILD_MODE'
+ 'COMMONAREA_MODE' 'ELEVATORS_MODE' 'ENTRANCES_MODE' 'FLOORSMAX_MODE'
+ 'FLOORSMIN_MODE' 'LANDAREA_MODE' 'LIVINGAPARTMENTS_MODE'
+ 'LIVINGAREA_MODE' 'NONLIVINGAPARTMENTS_MODE' 'NONLIVINGAREA_MODE'
+ 'APARTMENTS_MEDI' 'BASEMENTAREA_MEDI' 'YEARS_BEGINEXPLUATATION_MEDI'
+ 'YEARS_BUILD_MEDI' 'COMMONAREA_MEDI' 'ELEVATORS_MEDI' 'ENTRANCES_MEDI'
+ 'FLOORSMAX_MEDI' 'FLOORSMIN_MEDI' 'LANDAREA_MEDI' 'LIVINGAPARTMENTS_MEDI'
+ 'LIVINGAREA_MEDI' 'NONLIVINGAPARTMENTS_MEDI' 'NONLIVINGAREA_MEDI'
+ 'FONDKAPREMONT_MODE' 'HOUSETYPE_MODE' 'TOTALAREA_MODE'
+ 'WALLSMATERIAL_MODE' 'EMERGENCYSTATE_MODE' 'OBS_30_CNT_SOCIAL_CIRCLE'
+ 'DEF_30_CNT_SOCIAL_CIRCLE' 'OBS_60_CNT_SOCIAL_CIRCLE'
+ 'DEF_60_CNT_SOCIAL_CIRCLE' 'DAYS_LAST_PHONE_CHANGE' 'FLAG_DOCUMENT_2'
+ 'FLAG_DOCUMENT_3' 'FLAG_DOCUMENT_4' 'FLAG_DOCUMENT_5' 'FLAG_DOCUMENT_6'
+ 'FLAG_DOCUMENT_7' 'FLAG_DOCUMENT_8' 'FLAG_DOCUMENT_9' 'FLAG_DOCUMENT_10'
+ 'FLAG_DOCUMENT_11' 'FLAG_DOCUMENT_12' 'FLAG_DOCUMENT_13'
+ 'FLAG_DOCUMENT_14' 'FLAG_DOCUMENT_15' 'FLAG_DOCUMENT_16'
+ 'FLAG_DOCUMENT_17' 'FLAG_DOCUMENT_18' 'FLAG_DOCUMENT_19'
+ 'FLAG_DOCUMENT_20' 'FLAG_DOCUMENT_21' 'AMT_REQ_CREDIT_BUREAU_HOUR'
+ 'AMT_REQ_CREDIT_BUREAU_DAY' 'AMT_REQ_CREDIT_BUREAU_WEEK'
+ 'AMT_REQ_CREDIT_BUREAU_MON' 'AMT_REQ_CREDIT_BUREAU_QRT'
+ 'AMT_REQ_CREDIT_BUREAU_YEAR']
+
+
+data types count:
+float64    65
+int64      40
+object     16
+dtype: int64
+
+
+data types details:
+SK_ID_CURR                      int64
+NAME_CONTRACT_TYPE             object
+CODE_GENDER                    object
+FLAG_OWN_CAR                   object
+FLAG_OWN_REALTY                object
+                               ...   
+AMT_REQ_CREDIT_BUREAU_DAY     float64
+AMT_REQ_CREDIT_BUREAU_WEEK    float64
+AMT_REQ_CREDIT_BUREAU_MON     float64
+AMT_REQ_CREDIT_BUREAU_QRT     float64
+AMT_REQ_CREDIT_BUREAU_YEAR    float64
+Length: 121, dtype: object
+
+
+Snapshot of the training data:
+   SK_ID_CURR  TARGET  ... AMT_REQ_CREDIT_BUREAU_QRT AMT_REQ_CREDIT_BUREAU_YEAR
+0      100002       1  ...                       0.0                        1.0
+1      100003       0  ...                       0.0                        0.0
+2      100004       0  ...                       0.0                        0.0
+3      100006       0  ...                       NaN                        NaN
+4      100007       0  ...                       0.0                        0.0
+
+[5 rows x 122 columns]
+
+
+Target details in training data:
+0    0.919271
+1    0.080729
+Name: TARGET, dtype: float64
+
+
+Plotting "Target Analysis in Training data"
+
+
+Checking missing values in training data:
+This data set contains 67 columns with missing values
+                          Missing_Values_Count  Percentage
+COMMONAREA_AVG                          214865   69.872297
+COMMONAREA_MODE                         214865   69.872297
+COMMONAREA_MEDI                         214865   69.872297
+NONLIVINGAPARTMENTS_AVG                 213514   69.432963
+NONLIVINGAPARTMENTS_MEDI                213514   69.432963
+...                                        ...         ...
+EXT_SOURCE_2                               660    0.214626
+AMT_GOODS_PRICE                            278    0.090403
+AMT_ANNUITY                                 12    0.003902
+CNT_FAM_MEMBERS                              2    0.000650
+DAYS_LAST_PHONE_CHANGE                       1    0.000325
+
+[67 rows x 2 columns]
+
+
+From the first analysis of the training data, we notice the following:
+======================================================================
+1- training and testing data are identical, except for the target column which is the output label.
+2- the majority of clients repaid the load (around 92%), while around 8% defaulted.
+3- there are missing values in 67 columns in the training data that needs to be processed later.
+
+
+------------------ Train Data Categorical and Integer Features Analysis ---------------------------------------
+
+
+categorical features of the training data set:
+['NAME_CONTRACT_TYPE', 'CODE_GENDER', 'FLAG_OWN_CAR', 'FLAG_OWN_REALTY', 'NAME_TYPE_SUITE', 'NAME_INCOME_TYPE', 'NAME_EDUCATION_TYPE', 'NAME_FAMILY_STATUS', 'NAME_HOUSING_TYPE', 'OCCUPATION_TYPE', 'WEEKDAY_APPR_PROCESS_START', 'ORGANIZATION_TYPE', 'FONDKAPREMONT_MODE', 'HOUSETYPE_MODE', 'WALLSMATERIAL_MODE', 'EMERGENCYSTATE_MODE']
+
+
+Here we print the percentage og each value of the feature
+check plots in the corresponding folder
+
+
+Cash loans         0.904787
+Revolving loans    0.095213
+Name: NAME_CONTRACT_TYPE, dtype: float64
+
+
+F      0.658344
+M      0.341643
+XNA    0.000013
+Name: CODE_GENDER, dtype: float64
+
+
+N    0.659892
+Y    0.340108
+Name: FLAG_OWN_CAR, dtype: float64
+
+
+Y    0.693673
+N    0.306327
+Name: FLAG_OWN_REALTY, dtype: float64
+
+
+Unaccompanied      0.811596
+Family             0.131112
+Spouse, partner    0.037130
+Children           0.010669
+Other_B            0.005780
+Other_A            0.002828
+Group of people    0.000885
+Name: NAME_TYPE_SUITE, dtype: float64
+
+
+Working                 0.516320
+Commercial associate    0.232892
+Pensioner               0.180033
+State servant           0.070576
+Unemployed              0.000072
+Student                 0.000059
+Businessman             0.000033
+Maternity leave         0.000016
+Name: NAME_INCOME_TYPE, dtype: float64
+
+
+Secondary / secondary special    0.710189
+Higher education                 0.243448
+Incomplete higher                0.033420
+Lower secondary                  0.012409
+Academic degree                  0.000533
+Name: NAME_EDUCATION_TYPE, dtype: float64
+
+
+Married                 0.638780
+Single / not married    0.147780
+Civil marriage          0.096826
+Separated               0.064290
+Widow                   0.052317
+Unknown                 0.000007
+Name: NAME_FAMILY_STATUS, dtype: float64
+
+
+House / apartment      0.887344
+With parents           0.048258
+Municipal apartment    0.036366
+Rented apartment       0.015873
+Office apartment       0.008510
+Co-op apartment        0.003649
+Name: NAME_HOUSING_TYPE, dtype: float64
+
+
+Laborers                 0.261396
+Sales staff              0.152056
+Core staff               0.130589
+Managers                 0.101227
+Drivers                  0.088116
+High skill tech staff    0.053903
+Accountants              0.046481
+Medicine staff           0.040437
+Security staff           0.031835
+Cooking staff            0.028164
+Cleaning staff           0.022040
+Private service staff    0.012562
+Low-skill Laborers       0.009914
+Waiters/barmen staff     0.006385
+Secretaries              0.006181
+Realty agents            0.003557
+HR staff                 0.002667
+IT staff                 0.002491
+Name: OCCUPATION_TYPE, dtype: float64
+
+
+Business Entity Type 3    0.221104
+XNA                       0.180072
+Self-employed             0.124913
+Other                     0.054252
+Medicine                  0.036399
+Business Entity Type 2    0.034317
+Government                0.033833
+School                    0.028919
+Trade: type 7             0.025466
+Kindergarten              0.022373
+Construction              0.021856
+Business Entity Type 1    0.019459
+Transport: type 4         0.017554
+Trade: type 3             0.011356
+Industry: type 9          0.010952
+Industry: type 3          0.010660
+Security                  0.010559
+Housing                   0.009619
+Industry: type 11         0.008793
+Military                  0.008566
+Bank                      0.008153
+Agriculture               0.007980
+Police                    0.007613
+Transport: type 2         0.007167
+Postal                    0.007014
+Security Ministries       0.006419
+Trade: type 2             0.006179
+Restaurant                0.005889
+Services                  0.005122
+University                0.004315
+Industry: type 7          0.004250
+Transport: type 3         0.003860
+Industry: type 1          0.003379
+Hotel                     0.003141
+Electricity               0.003089
+Industry: type 4          0.002852
+Trade: type 6             0.002052
+Industry: type 5          0.001948
+Insurance                 0.001941
+Telecom                   0.001876
+Emergency                 0.001821
+Industry: type 2          0.001489
+Advertising               0.001395
+Realtor                   0.001288
+Culture                   0.001232
+Industry: type 12         0.001200
+Trade: type 1             0.001132
+Mobile                    0.001031
+Legal Services            0.000992
+Cleaning                  0.000845
+Transport: type 1         0.000654
+Industry: type 6          0.000364
+Industry: type 10         0.000354
+Religion                  0.000276
+Industry: type 13         0.000218
+Trade: type 4             0.000208
+Trade: type 5             0.000159
+Industry: type 8          0.000078
+Name: ORGANIZATION_TYPE, dtype: float64
+
+
+block of flats      0.982306
+specific housing    0.009784
+terraced house      0.007911
+Name: HOUSETYPE_MODE, dtype: float64
+
+
+0     0.700368
+1     0.198754
+2     0.086986
+3     0.012087
+4     0.001395
+5     0.000273
+6     0.000068
+7     0.000023
+14    0.000010
+19    0.000007
+12    0.000007
+10    0.000007
+9     0.000007
+8     0.000007
+11    0.000003
+Name: CNT_CHILDREN, dtype: float64
+
+
+2.0     0.514967
+1.0     0.220634
+3.0     0.171055
+4.0     0.080313
+5.0     0.011310
+6.0     0.001327
+7.0     0.000263
+8.0     0.000065
+9.0     0.000020
+10.0    0.000010
+14.0    0.000007
+16.0    0.000007
+12.0    0.000007
+20.0    0.000007
+11.0    0.000003
+13.0    0.000003
+15.0    0.000003
+Name: CNT_FAM_MEMBERS, dtype: float64
+
+
+0    0.718934
+1    0.281066
+Name: FLAG_PHONE, dtype: float64
+
+
+2    0.738133
+3    0.157165
+1    0.104702
+Name: REGION_RATING_CLIENT, dtype: float64
+
+
+0    0.999958
+1    0.000042
+Name: FLAG_DOCUMENT_2, dtype: float64
+
+
+
+
+We notice the following insights:
+=================================
+1- Clients with cash loans have a higher chance to default than revolving loans.
+2- The majority of clients are females.
+3- Males have a higher chance to default (around 10%).
+4- Car owners are more likely to repay the loans.
+5- Businessmen and students always repaid the loan.
+7- Unemployed people or the ones who in maternity leaves are more likely to default.
+8- Lower secondary are the most who default.
+9- Single people and civil married people are the most people to default.
+10- Clients with more children/family members are more likely to default.
+11- The majority of clients did not provide document 2 (around 99%).
+12- Clients who did provide document 2 tend more to default (Unfortunately, we lack more info about it).
+
+
+-------------------------------------- Numerical Features Analysis --------------------------------------------
+
+
+numerical features of the training data set:
+['AMT_INCOME_TOTAL', 'AMT_CREDIT', 'AMT_ANNUITY', 'AMT_GOODS_PRICE', 'REGION_POPULATION_RELATIVE', 'DAYS_REGISTRATION', 'OWN_CAR_AGE', 'CNT_FAM_MEMBERS', 'EXT_SOURCE_1', 'EXT_SOURCE_2', 'EXT_SOURCE_3', 'APARTMENTS_AVG', 'BASEMENTAREA_AVG', 'YEARS_BEGINEXPLUATATION_AVG', 'YEARS_BUILD_AVG', 'COMMONAREA_AVG', 'ELEVATORS_AVG', 'ENTRANCES_AVG', 'FLOORSMAX_AVG', 'FLOORSMIN_AVG', 'LANDAREA_AVG', 'LIVINGAPARTMENTS_AVG', 'LIVINGAREA_AVG', 'NONLIVINGAPARTMENTS_AVG', 'NONLIVINGAREA_AVG', 'APARTMENTS_MODE', 'BASEMENTAREA_MODE', 'YEARS_BEGINEXPLUATATION_MODE', 'YEARS_BUILD_MODE', 'COMMONAREA_MODE', 'ELEVATORS_MODE', 'ENTRANCES_MODE', 'FLOORSMAX_MODE', 'FLOORSMIN_MODE', 'LANDAREA_MODE', 'LIVINGAPARTMENTS_MODE', 'LIVINGAREA_MODE', 'NONLIVINGAPARTMENTS_MODE', 'NONLIVINGAREA_MODE', 'APARTMENTS_MEDI', 'BASEMENTAREA_MEDI', 'YEARS_BEGINEXPLUATATION_MEDI', 'YEARS_BUILD_MEDI', 'COMMONAREA_MEDI', 'ELEVATORS_MEDI', 'ENTRANCES_MEDI', 'FLOORSMAX_MEDI', 'FLOORSMIN_MEDI', 'LANDAREA_MEDI', 'LIVINGAPARTMENTS_MEDI', 'LIVINGAREA_MEDI', 'NONLIVINGAPARTMENTS_MEDI', 'NONLIVINGAREA_MEDI', 'TOTALAREA_MODE', 'OBS_30_CNT_SOCIAL_CIRCLE', 'DEF_30_CNT_SOCIAL_CIRCLE', 'OBS_60_CNT_SOCIAL_CIRCLE', 'DEF_60_CNT_SOCIAL_CIRCLE', 'DAYS_LAST_PHONE_CHANGE', 'AMT_REQ_CREDIT_BUREAU_HOUR', 'AMT_REQ_CREDIT_BUREAU_DAY', 'AMT_REQ_CREDIT_BUREAU_WEEK', 'AMT_REQ_CREDIT_BUREAU_MON', 'AMT_REQ_CREDIT_BUREAU_QRT', 'AMT_REQ_CREDIT_BUREAU_YEAR']
+
+
+check plots in the corresponding folder
+
+
+We notice that densities are reasonable for the selected features, except for 'DAYS_EMPLOYED'.
+We check 'DAYS_EMPLOYED' further in case it contains outliers.
+
+
+------------------------------------------- Checking Anomalies ------------------------------------------------
+
+
+count    307511.000000
+mean         43.936973
+std          11.956133
+min          20.517808
+25%          34.008219
+50%          43.150685
+75%          53.923288
+max          69.120548
+Name: DAYS_BIRTH, dtype: float64
+
+
+count    307511.000000
+mean         13.660604
+std           9.651743
+min          -0.000000
+25%           5.506849
+50%          12.339726
+75%          20.491781
+max          67.594521
+Name: DAYS_REGISTRATION, dtype: float64
+
+
+count    307511.000000
+mean        174.835742
+std         387.056895
+min         -49.073973
+25%          -7.561644
+50%          -3.323288
+75%          -0.791781
+max        1000.665753
+Name: DAYS_EMPLOYED, dtype: float64
+
+
+The max value of days of employment do not make sense as it equals 1000 years.
+We check the target labels of those entities to decide if we drop those outliers or fix them in some way.
+
+
+Lower outliers for DAYS_EMPLOYED
+Series([], Name: DAYS_EMPLOYED, dtype: int64)
+
+
+Higher outliers for DAYS_EMPLOYED
+8         365243
+11        365243
+23        365243
+38        365243
+43        365243
+           ...  
+307469    365243
+307483    365243
+307487    365243
+307505    365243
+307507    365243
+Name: DAYS_EMPLOYED, Length: 55374, dtype: int64
+
+
+Outliers checker returned the same suspicious value as it is further than 2 std from the mean.
+
+
+0.05399646043269404
+
+
+5% of the anomalies entities default, which is very interesting, so we will not remove them.
+Instead, we will assign a NAN value to be filled later when dealing with missing values.
+We can, however, add an additional column to indicate whether the value was originally an anomaly or not.
+
+
+count    48744.000000
+mean       184.891415
+std        395.475362
+min        -47.843836
+25%         -7.972603
+50%         -3.542466
+75%         -0.810959
+max       1000.665753
+Name: DAYS_EMPLOYED, dtype: float64
+
+
+We notice that the same issue appears in the test data, so we fix it in the same way.
+It is important to keep train and test data consistent and get the same changes done on both of them.
+
+
+We can use the outlier checker for all the features and analyse further if we get some results.
+Here we only mention the suspicious cases we found for simplicity.
+Lower outliers for AMT_INCOME_TOTAL
+Series([], Name: AMT_INCOME_TOTAL, dtype: float64)
+
+
+Higher outliers for AMT_INCOME_TOTAL
+319        765000.0
+1064       720000.0
+1238       810000.0
+1450       675000.0
+1504      1080000.0
+            ...    
+305941     675000.0
+306005     675000.0
+306028    1350000.0
+306179     949500.0
+306285     936000.0
+Name: AMT_INCOME_TOTAL, Length: 1438, dtype: float64
+
+
+We also notice some weird results for AMT_INCOME_TOTAL, so we check them further.
+
+
+count    3.075110e+05
+mean     1.687979e+05
+std      2.371231e+05
+min      2.565000e+04
+25%      1.125000e+05
+50%      1.471500e+05
+75%      2.025000e+05
+max      1.170000e+08
+Name: AMT_INCOME_TOTAL, dtype: float64
+117000000.0
+
+
+We notice that the max value is really big and a bit suspicious, so we deal with it as what is previously done.
+We notice that the problem is not available in the test data:
+4410000.0
+
+
+------------------------------------------- Correlation -------------------------------------------------------
+
+
+The top 10 features positively correlated with the target are:
+
+
+TARGET                         1.000000
+DAYS_BIRTH                     0.078239
+DAYS_EMPLOYED                  0.074958
+REGION_RATING_CLIENT_W_CITY    0.060893
+REGION_RATING_CLIENT           0.058899
+DAYS_LAST_PHONE_CHANGE         0.055218
+DAYS_ID_PUBLISH                0.051457
+REG_CITY_NOT_WORK_CITY         0.050994
+FLAG_EMP_PHONE                 0.045982
+REG_CITY_NOT_LIVE_CITY         0.044395
+FLAG_DOCUMENT_3                0.044346
+Name: TARGET, dtype: float64
+
+
+The top 10 features negatively correlated with the target are:
+
+
+ELEVATORS_AVG                -0.034199
+REGION_POPULATION_RELATIVE   -0.037227
+AMT_GOODS_PRICE              -0.039645
+FLOORSMAX_MODE               -0.043226
+FLOORSMAX_MEDI               -0.043768
+FLOORSMAX_AVG                -0.044003
+DAYS_EMPLOYED_ANOMALY        -0.045987
+EXT_SOURCE_1                 -0.155317
+EXT_SOURCE_2                 -0.160472
+EXT_SOURCE_3                 -0.178919
+Name: TARGET, dtype: float64
+
+
+Plotting "Correlation of Age and Target"
+
+
+Plotting "Correlation of EXT_SOURCE and Target"
+
+
+We notice the following insights:
+=================================
+1- The density of defaulting drops when the client is older and this confirms the positive correlation we found.
+2- EXT_SOURCE_3 (the feature with the highest negative correlation with target) has the biggest difference.
+3- In general, the client's chance to default decreases when the value of the feature EXT_SOURCE increases.
+
+
+-------------------------------------- Categorical Features Encoding ------------------------------------------
+
+
+Classification models cannot deal with categorical data, so we need to encode them.
+We use 'Label encoding' for binary features, and 'One-hot encoding' for features with more than 2 labels.
+
+
+Encoding NAME_CONTRACT_TYPE with label encoding
+Encoding FLAG_OWN_CAR with label encoding
+Encoding FLAG_OWN_REALTY with label encoding
+
+
+training data dimensions after encoding:  (307511, 245)
+testing data dimensions after encoding:  (48744, 240)
+
+
+The difference between test and train columns should be 1 (due to the target), but the difference now is 3.
+This means that some columns have more labels in the training data than in the test data.
+We align the two data sets with 'inner' type to only keep values present in both of them.
+It is important to save the target column and re-add it to the train data, as the alignment would remove it.
+
+
+train data dimensions after encoding and aligning:  (307511, 241)
+test data dimensions after encoding aligning:  (48744, 240)
+
+
+--------------------------------------- Baseline Model Fitting ------------------------------------------------
+
+
+Training data shape:  (307511, 239)
+Testing data shape:  (48744, 239)
+RandomForest: =  0.7122207689368198
+Logistic: =  0.6850737860676274
+DecisionTree: =  0.5413796881387355
+
+
+We notice that the random forest classifier is the best (as expected), so we choose it for predictions.
+
+
+Retraining the RF model
+
+
+Plotting RF_Baseline_Feature_Importance
+
+
+Predicting for the test data
+We save the results of prediction in 'RF_Baseline_Predictions.csv'
+
+
+----------------------------- Features Engineering 1 - Adding Features ----------------------------------------
+
+
+checking features of other data sets
+
+
+Bureau: All client's previous credits provided by other financial institutions and reported to Credit Bureau.
+dimensions:
+(1716428, 17)
+
+
+columns:
+['SK_ID_CURR' 'SK_ID_BUREAU' 'CREDIT_ACTIVE' 'CREDIT_CURRENCY'
+ 'DAYS_CREDIT' 'CREDIT_DAY_OVERDUE' 'DAYS_CREDIT_ENDDATE'
+ 'DAYS_ENDDATE_FACT' 'AMT_CREDIT_MAX_OVERDUE' 'CNT_CREDIT_PROLONG'
+ 'AMT_CREDIT_SUM' 'AMT_CREDIT_SUM_DEBT' 'AMT_CREDIT_SUM_LIMIT'
+ 'AMT_CREDIT_SUM_OVERDUE' 'CREDIT_TYPE' 'DAYS_CREDIT_UPDATE' 'AMT_ANNUITY']
+
+
+data types count:
+float64    8
+int64      6
+object     3
+dtype: int64
+
+
+data types details:
+SK_ID_CURR                  int64
+SK_ID_BUREAU                int64
+CREDIT_ACTIVE              object
+CREDIT_CURRENCY            object
+DAYS_CREDIT                 int64
+CREDIT_DAY_OVERDUE          int64
+DAYS_CREDIT_ENDDATE       float64
+DAYS_ENDDATE_FACT         float64
+AMT_CREDIT_MAX_OVERDUE    float64
+CNT_CREDIT_PROLONG          int64
+AMT_CREDIT_SUM            float64
+AMT_CREDIT_SUM_DEBT       float64
+AMT_CREDIT_SUM_LIMIT      float64
+AMT_CREDIT_SUM_OVERDUE    float64
+CREDIT_TYPE                object
+DAYS_CREDIT_UPDATE          int64
+AMT_ANNUITY               float64
+dtype: object
+
+
+check the values of active credit as it seems interesting
+Closed      1079273
+Active       630607
+Sold           6527
+Bad debt         21
+Name: CREDIT_ACTIVE, dtype: int64
+
+
+taking the number of previous loans per client and checking how many of them is active might be interesting
+   SK_ID_CURR  PREVIOUS_LOANS_COUNT  ACTIVE_LOANS_COUNT
+0      215354                    11                   6
+1      162297                     6                   3
+2      402440                     1                   1
+3      238881                     8                   3
+4      222183                     8                   5
+-----------------------------------------
+Previous applications: All previous applications for Home Credit loans of clients who have loans in our sample.
+dimensions:
+(1670214, 37)
+
+
+columns:
+['SK_ID_PREV' 'SK_ID_CURR' 'NAME_CONTRACT_TYPE' 'AMT_ANNUITY'
+ 'AMT_APPLICATION' 'AMT_CREDIT' 'AMT_DOWN_PAYMENT' 'AMT_GOODS_PRICE'
+ 'WEEKDAY_APPR_PROCESS_START' 'HOUR_APPR_PROCESS_START'
+ 'FLAG_LAST_APPL_PER_CONTRACT' 'NFLAG_LAST_APPL_IN_DAY'
+ 'RATE_DOWN_PAYMENT' 'RATE_INTEREST_PRIMARY' 'RATE_INTEREST_PRIVILEGED'
+ 'NAME_CASH_LOAN_PURPOSE' 'NAME_CONTRACT_STATUS' 'DAYS_DECISION'
+ 'NAME_PAYMENT_TYPE' 'CODE_REJECT_REASON' 'NAME_TYPE_SUITE'
+ 'NAME_CLIENT_TYPE' 'NAME_GOODS_CATEGORY' 'NAME_PORTFOLIO'
+ 'NAME_PRODUCT_TYPE' 'CHANNEL_TYPE' 'SELLERPLACE_AREA'
+ 'NAME_SELLER_INDUSTRY' 'CNT_PAYMENT' 'NAME_YIELD_GROUP'
+ 'PRODUCT_COMBINATION' 'DAYS_FIRST_DRAWING' 'DAYS_FIRST_DUE'
+ 'DAYS_LAST_DUE_1ST_VERSION' 'DAYS_LAST_DUE' 'DAYS_TERMINATION'
+ 'NFLAG_INSURED_ON_APPROVAL']
+
+
+data types count:
+object     16
+float64    15
+int64       6
+dtype: int64
+
+
+data types details:
+SK_ID_PREV                       int64
+SK_ID_CURR                       int64
+NAME_CONTRACT_TYPE              object
+AMT_ANNUITY                    float64
+AMT_APPLICATION                float64
+AMT_CREDIT                     float64
+AMT_DOWN_PAYMENT               float64
+AMT_GOODS_PRICE                float64
+WEEKDAY_APPR_PROCESS_START      object
+HOUR_APPR_PROCESS_START          int64
+FLAG_LAST_APPL_PER_CONTRACT     object
+NFLAG_LAST_APPL_IN_DAY           int64
+RATE_DOWN_PAYMENT              float64
+RATE_INTEREST_PRIMARY          float64
+RATE_INTEREST_PRIVILEGED       float64
+NAME_CASH_LOAN_PURPOSE          object
+NAME_CONTRACT_STATUS            object
+DAYS_DECISION                    int64
+NAME_PAYMENT_TYPE               object
+CODE_REJECT_REASON              object
+NAME_TYPE_SUITE                 object
+NAME_CLIENT_TYPE                object
+NAME_GOODS_CATEGORY             object
+NAME_PORTFOLIO                  object
+NAME_PRODUCT_TYPE               object
+CHANNEL_TYPE                    object
+SELLERPLACE_AREA                 int64
+NAME_SELLER_INDUSTRY            object
+CNT_PAYMENT                    float64
+NAME_YIELD_GROUP                object
+PRODUCT_COMBINATION             object
+DAYS_FIRST_DRAWING             float64
+DAYS_FIRST_DUE                 float64
+DAYS_LAST_DUE_1ST_VERSION      float64
+DAYS_LAST_DUE                  float64
+DAYS_TERMINATION               float64
+NFLAG_INSURED_ON_APPROVAL      float64
+dtype: object
+
+
+check the values of previous application status as it seems interesting
+Approved        1036781
+Canceled         316319
+Refused          290678
+Unused offer      26436
+Name: NAME_CONTRACT_STATUS, dtype: int64
+
+
+taking the count of previous applications per client at Home Credit and checking how many were approved/refused.
+   SK_ID_CURR  ...  REFUSED_PREVIOUS_APPLICATIONS
+0      271877  ...                              1
+1      108129  ...                              0
+2      122040  ...                              0
+3      176158  ...                             15
+4      202054  ...                             13
+
+[5 rows x 4 columns]
+
+
+------------------------------------- Improved Model Fitting - 1 ----------------------------------------------
+
+
+Training data shape:  (307511, 244)
+Testing data shape:  (48744, 244)
+
+
+current model auc score =  0.712388834918943
+We notice that the AUC score is a bit better than the first classifier without the additional features
+
+
+Retraining the RF model
+
+
+Plotting RF_Improved_Feature_Importance
+
+
+Predicting for the test data
+We save the results of prediction in 'RF_Improved_Predictions.csv'.
+
+
+----------------------------- Features Engineering 2 - Features Selection--------------------------------------
+
+
+Here we check the best n features to use only them in predicting.
+As a simple first solution, we use Anova F-test and we only keep 30 features since the features importance plots show a decrease.
+
+
+------------------------------------- Improved Model Fitting - 2 ----------------------------------------------
+Training data shape:  (307511, 30)
+Testing data shape:  (48744, 30)
+
+
+current model auc score =  0.7159352990126118
+We notice that the AUC score is better than the first improved model that had a lot of features.
+
+
+We fit our final model that has a set of selected features from multiple data sets
+
+
+Retraining the RF model
+
+
+Plotting RF_Improved_Selected_Features_Feature_Importance
+
+
+Predicting for the test data
+We save the results of prediction in 'RF_Improved_Selected_Features_Predictions.csv'.
+
+
