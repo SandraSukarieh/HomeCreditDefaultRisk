@@ -75,4 +75,4 @@ When having more resources and time, the following can be done:
 - Check 'Domain Knowledge' features by getting a deeper understanding of financial data and use that to extract new features from the ones we already have.
 - Add interaction terms between features especially the most relevant ones.
 - Raise some features to some power to emphasize their effect in the fitted model.
-- Perform a deeper parameter tunning for the selected model.
+- Perform a deeper parameter tuning for the selected model.
