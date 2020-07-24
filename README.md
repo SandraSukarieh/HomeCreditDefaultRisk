@@ -36,6 +36,8 @@ $ python3 main.py -p 'path\to\csv\data\files' > output.txt
 - Checking how many columns in the training data contains missing values, and what are those percentages.
 - Checking for outliers using the mean and standard deviation, then replace those values with NAN to be filled later.
 - Checking the correlation between the features and the TARGET, and plotting corresponding information.
+Example:
+![Target vs. CNT CHILDREN](/output_of_solution/correlation_plots/Correlation_Age_Target.png)
 
 2- We encode the categorical features depending on:
 - Label encoding for binary features.
@@ -48,6 +50,7 @@ $ python3 main.py -p 'path\to\csv\data\files' > output.txt
 - We fit the random forest model on the train data and then use it to predict the TARGET labels of the test data.
 - We plot the top 20 important features for the classifier.
 - We save the predictions into 'RF_Baseline_Predictions.csv'.
+![Baseline Features Importance](/output_of_solution/RF_Baseline_Feature_Importance_Top_20.png)
 
 4- We improve our model using features engineering, and we start with including features from the other data sets, such as Bureau and Previous_Applications:
 - We get features that seem interesting from those two data sets.
