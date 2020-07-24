@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import unittest
 
-from missing_values_functions import calculate_missing_values_total_and_percentage
+from missing_values import calculate_missing_values_total_and_percentage
 
 
 def get_basic_statistics(data):
